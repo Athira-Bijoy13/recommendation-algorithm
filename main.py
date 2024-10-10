@@ -233,29 +233,7 @@ def content_based_filtering():
                 ]
         }
     },
-        {
-        "id": 204,
-        "preference":{
-            "products":[
-                {
-                "product_name":"Apple",
-                "preferred_cost": {
-                    "min": 500, 
-                    "max": 1000
-                }
-            },
-                
-                
-                ],
-            {
-                "categories":[
-                    {
-                        "category_name":"Vegetables",
-                    }
-                ]
-            }
-        }
-    },
+        
         {
         "id": 205,
         "preference":{
@@ -279,7 +257,7 @@ def content_based_filtering():
         "category_name":"Fruits"
     }
    
-    owner=pd.DataFrame(owners[1])
+    owner=pd.DataFrame(owners[0])
 
     arr=[]
     influencers_df=pd.DataFrame(influencers)
@@ -289,8 +267,8 @@ def content_based_filtering():
     for index, user in influencers_df.iterrows():
         scores=[]
         # print(user["id"])
-        if has_categories:
-            for 
+        # if has_categories:
+        #     for 
         category_score=compare_categories(owner,user)
         product_score=compare_products(owner,user)
         marketing_score=compare_marketing(owner,user)
